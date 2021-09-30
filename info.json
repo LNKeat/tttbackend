@@ -1,0 +1,20 @@
+[
+  {
+    "name": "firstobject",
+    "myarray": [
+      {
+        "one": "a",
+        "two": "b"
+      }
+    ]
+  },
+  {
+    "name": "secondobject",
+    "mysecondarray": [
+      {
+        "one": "a",
+        "two": "b"
+      }
+    ]
+  }
+]
