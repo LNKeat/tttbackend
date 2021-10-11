@@ -37,11 +37,13 @@ io.on("connection", (socket) => {
     clearInterval(interval);
   }
   interval = setInterval(() => getApiAndEmit(socket), 1000);
-  console.dir(socket)
 
   socket.emit('connected', { "id": socket.id }); // STEP 5 ::=> Notify request cllient that it is not connected with server  
 
-  socket.on("move", (data) => console.log(data))
+  socket.on("move", (data) => {
+    console.log(data)
+    socket.emit("move", data)
+  })
 
   socket.on("disconnect", () => {
     console.log("Client disconnected");
